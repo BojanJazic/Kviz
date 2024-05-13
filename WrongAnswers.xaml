@@ -1,0 +1,36 @@
+﻿<Window x:Class="Kviz.WrongAnswers"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kviz"
+        mc:Ignorable="d"
+        Title="Pogrešni odgovori" Height="600" Width="1000" MinHeight="600" MaxHeight="600" MinWidth="1000" MaxWidth="1000" Icon="X.ico">
+    <StackPanel Width="1000" Height="600" MinHeight="600" MaxHeight="600" MinWidth="1000" MaxWidth="1000" Margin="0,0,0,19" Background="AntiqueWhite">
+        <StackPanel Height="10" Width="1000"></StackPanel>
+        <Grid Height="45">
+            <Label Content="Pitanja na koja ste dali pogrešan odgovor:" Width="452" FontSize="24" HorizontalAlignment="Left" Margin="10,0,0,0"></Label>
+            <Label Content="Tačnih odgovora:" HorizontalAlignment="Left" FontSize="24" Margin="660,0,0,0"></Label>
+            <TextBox Name="tbBrojTacnihOdgovora" IsReadOnly="True" Margin="828,0,15,0" FontSize="24" TextAlignment="Center" Width="80"  />
+        </Grid>
+
+        <StackPanel Height="10" Width="1000"></StackPanel>
+        <TextBox Name="tbWrongAnswers" TextWrapping="Wrap" FontSize="20" Height="400" IsReadOnly="True"></TextBox>
+        <StackPanel Height="18" Width="1000"></StackPanel>
+        <Grid>
+            <Label Content="Da li želite da ponovo igrate?" Width="500" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="24"></Label>
+
+            <Grid Height="50">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="318*"/>
+                    <ColumnDefinition Width="45*"/>
+                    <ColumnDefinition Width="637*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Height="10" Width="1000" Grid.ColumnSpan="3" Margin="0,25,0,25"></StackPanel>
+                <Button Name="btnNe"  Content="Ne" Width="263" HorizontalAlignment="Left" Background="Aquamarine" FontSize="24" FontStyle="Oblique" Grid.Column="2" Margin="337,0,0,0" Click="btnNe_Click" FontWeight="Bold"></Button>
+                <Button Name="btnDa" Content="Da" Width="263" FontSize="24" FontStyle="Oblique" Grid.Column="2" Background="Aquamarine" Margin="10,0,350,0" Click="Button_Click" FontWeight="Bold"/>
+            </Grid>
+        </Grid>
+
+    </StackPanel>
+</Window>

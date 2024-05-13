@@ -1,0 +1,26 @@
+﻿<Window x:Class="Kviz.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kviz"
+        mc:Ignorable="d"
+        Title="KVIZ" Height="520" Width="1000" MaxHeight="520" MinHeight="520" MaxWidth="1000" MinWidth="1000" Icon="note.ico" >
+    <StackPanel Background="AliceBlue">
+        <StackPanel Height="35" Width="1000"></StackPanel>
+        <Label Name="lbQuestion" HorizontalAlignment="Stretch" VerticalAlignment="Center" Height="65" FontSize="24" FontStyle="Normal" HorizontalContentAlignment="Center">
+            <TextBlock x:Name="tbQuestion" Text="Pitanje" TextWrapping="Wrap" VerticalAlignment="Center" TextAlignment="Center" Width="1000" Height="65" FontSize="24" FontStyle="Normal"></TextBlock>
+        </Label>
+        <StackPanel Height="50" Width="1000"></StackPanel>
+        <Button x:Name="btnAnswer1" Content="Odgovor 1" Height="50" Width="400"  FontSize="24" Click="chooseAnswer"></Button>
+        <StackPanel Height="20" Width="1000"></StackPanel>
+        <Button x:Name="btnAnswer2" Content="Odgovor 2" Height="50" Width="400"  FontSize="24" Click="chooseAnswer"></Button>
+        <StackPanel Height="20" Width="1000"></StackPanel>
+        <Button x:Name="btnAnswer3" Content="Odgovor 3" Height="50" Width="400"  FontSize="24" Click="chooseAnswer"></Button>
+        <StackPanel Height="20" Width="1000"></StackPanel>
+        <Button x:Name="btnAnswer4" Content="Odgovor 4" Height="50" Width="400"  FontSize="24" Click="chooseAnswer"></Button>
+        <StackPanel Height="20" Width="1000"></StackPanel>
+        <Label Content="Preostalo pitanja" FontSize="14" VerticalAlignment="Bottom" HorizontalAlignment="Left"></Label>
+        <ProgressBar x:Name="percentage" Height="7" Minimum="1" Maximum="10"></ProgressBar>
+    </StackPanel>
+</Window>
